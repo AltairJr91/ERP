@@ -10,7 +10,7 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode(of = "id")
-public class Product {
+public class ProductEntities {
     @Id @GeneratedValue(strategy = GenerationType.UUID)
     private String id;
 
@@ -20,7 +20,7 @@ public class Product {
     private String description;
     private String category;
 
-    public Product(RequestProduct requestProduct){
+    public ProductEntities(RequestProductDTO requestProduct){
         this.name = requestProduct.name();
         this.value = requestProduct.value();
         this.quantity = requestProduct.quantity();

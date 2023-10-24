@@ -1,6 +1,6 @@
 package ERPsystem.Domain.Products;
 
-public record RequestProduct(
+public record RequestProductDTO(
         String id,
         String name,
         Double value,
